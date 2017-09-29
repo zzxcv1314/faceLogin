@@ -3,7 +3,7 @@
 function addFace(usrName) {
 	var faceListId = "msptest"
 	var subscriptionKey = "0b14de93d6934d94a4e28535c1934f16";
-	var imgPath = "https://jiyeonapp.azurewebsites.net/EnrollFace/image/" + usrName + '.jpg';
+	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/" + usrName + '.jpg';
 
 	$(function() {
 		var params = {
