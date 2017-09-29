@@ -31,13 +31,13 @@ function getFaceId(imgName) {
 		})
 		.done(function(data) {
 			var str = JSON.stringify(data);
-			var faceId = str.split(":").toString().split(",");
+			faceId = str.split(":").toString().split(",");
 		})
 		.fail(function() {
 			alert("error");
 		});
 	});
-	return faceId[1];
+	return faceId;
 }
 
 function verifyFace(faceId) {
