@@ -37,7 +37,7 @@ function getFaceId(imgName) {
 			alert("error");
 		});
 	});
-	return faceId;
+	return faceId[1];
 }
 
 function verifyFace(faceId) {
