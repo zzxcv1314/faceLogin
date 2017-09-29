@@ -41,7 +41,7 @@ function getFaceId(imgName) {
 }
 
 function verifyFace(faceId) {
-	var faceListId = "msptest";
+	var faceListId = "test";
 
 	$(function() {
 		var params = {
@@ -106,7 +106,7 @@ function uploadData(){
 }
 
 function getFaceList() {
-	var faceListId = "msptest";
+	var faceListId = "test";
 
 	$(function() {
 		var params = {

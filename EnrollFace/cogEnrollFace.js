@@ -1,7 +1,7 @@
 // cogEnrollFace
 
 function addFace(usrName) {
-	var faceListId = "msptest"
+	var faceListId = "test"
 	var subscriptionKey = "0b14de93d6934d94a4e28535c1934f16";
 	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/" + usrName + '.jpg';
 
