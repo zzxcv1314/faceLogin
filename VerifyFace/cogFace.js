@@ -34,9 +34,11 @@ function getFaceId(imgName) {
 			faceId = str.split(":").toString().split(",");
 		})
 		.fail(function() {
-			alert("error");
+			alert(faceId);
+			
 		});
 	});
+
 	return faceId[1];
 }
 
