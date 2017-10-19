@@ -1,7 +1,7 @@
 // cogFace
 // Using cognitive Face API service for verifing face in JavaScript
 
-var subscriptionKey = "0b14de93d6934d94a4e28535c1934f16";
+var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var faceList = getFaceList();
 
 // Get FaceID Using Cognivite API Service

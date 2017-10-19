@@ -2,7 +2,7 @@
 
 function addFace(usrName) {
 	var faceListId = "test"
-	var subscriptionKey = "0b14de93d6934d94a4e28535c1934f16";
+	var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/" + usrName + '.jpg';
 
 	$(function() {
