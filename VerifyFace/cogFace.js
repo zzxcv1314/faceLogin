@@ -16,7 +16,7 @@ function getFaceId(imgName) {
 			//"returnFaceAttributes": "{string}",
 		};
 		$.ajax( {
-			url: "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect?" + $.param(params),
+			url: "https://eastus.api.cognitive.microsoft.com/face/v1.0/detect?" + $.param(params),
 			beforeSend: function(xhrObj){
 				// Request headers
 				xhrObj.setRequestHeader("Content-Type","application/json");
@@ -51,7 +51,7 @@ function verifyFace(faceId) {
 		};
 
 		$.ajax({
-			url: "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/findsimilars?" + $.param(params),
+			url: "https://eastus.api.cognitive.microsoft.com/face/v1.0/findsimilars?" + $.param(params),
 			beforeSend: function(xhrObj){
 				// Request headers
 				xhrObj.setRequestHeader("Content-Type","application/json");
@@ -116,7 +116,7 @@ function getFaceList() {
 		};
 
 		$.ajax({
-			url: "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/facelists/" + faceListId + "?" + $.param(params),
+			url: "https://eastus.api.cognitive.microsoft.com/face/v1.0/facelists/" + faceListId + "?" + $.param(params),
 			beforeSend: function(xhrObj){
 				// Request headers
 			xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
