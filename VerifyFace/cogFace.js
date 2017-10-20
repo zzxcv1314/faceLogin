@@ -5,8 +5,9 @@ var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var faceList = getFaceList();
 
 // Get FaceID Using Cognivite API Service
+var imgName = "testimage.jpg"
 function getFaceId(imgName) {
-	var imgPath = "https://loginwithface.azurewebsites.net/VerifyFace/data/"+ "testimage.jpg";
+	var imgPath = "https://loginwithface.azurewebsites.net/VerifyFace/data/"+ imgName;
 
 	$(function() {
 		var params = {
