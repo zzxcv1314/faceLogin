@@ -77,6 +77,7 @@ function verifyFace(faceId) {
 					document.getElementById('resultInfo').innerHTML += faceList[x].userData + '<br>';
 				}
 			}
+			imgName
 
 			uploadData();
 
