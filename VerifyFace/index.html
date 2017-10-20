@@ -31,105 +31,105 @@
 		var process_snapshot = false; //In processing snapshot state, can't acess take_snapshot
 		var iswebcamOn = false; //Stop verify face untill webcamOn is true
 		
-		//Track & Recognize face
-		window.onload = function() {
-			$("#snapshotButton").hide();
+		// //Track & Recognize face
+		// window.onload = function() {
+		// 	$("#snapshotButton").hide();
 
-			var video = document.getElementById('video');
-			var canvas = document.getElementById('canvas');
-			var context = canvas.getContext('2d');
+		// 	var video = document.getElementById('video');
+		// 	var canvas = document.getElementById('canvas');
+		// 	var context = canvas.getContext('2d');
 
-			var tracker = new tracking.ObjectTracker('face');
-			tracker.setInitialScale(4);
-			tracker.setStepSize(2);
-			tracker.setEdgesDensity(0.1);
+		// 	var tracker = new tracking.ObjectTracker('face');
+		// 	tracker.setInitialScale(4);
+		// 	tracker.setStepSize(2);
+		// 	tracker.setEdgesDensity(0.1);
 
-			tracking.track('#video', tracker, { camera: true });
+		// 	tracking.track('#video', tracker, { camera: true });
 
-			tracker.on('track', function(event) {
-				context.clearRect(0, 0, canvas.width, canvas.height);
+		// 	tracker.on('track', function(event) {
+		// 		context.clearRect(0, 0, canvas.width, canvas.height);
 
-				if (event.data.length === 0)
-				{
-					// No face were detected in this frame.
-					if (wait_snapshot == false)
-					{
-						availiable_snapshot = 0;
-						$("#snapshotButton").hide();
-					}
-				} 
-				else {
-					event.data.forEach(function(rect) {
-						context.strokeStyle = '#a64ceb';
-						context.strokeRect(rect.x, rect.y, rect.width, rect.height);
-						context.font = '11px Helvetica';
-						context.fillStyle = "#fff";
-						context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
-						context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
+		// 		if (event.data.length === 0)
+		// 		{
+		// 			// No face were detected in this frame.
+		// 			if (wait_snapshot == false)
+		// 			{
+		// 				availiable_snapshot = 0;
+		// 				$("#snapshotButton").hide();
+		// 			}
+		// 		} 
+		// 		else {
+		// 			event.data.forEach(function(rect) {
+		// 				context.strokeStyle = '#a64ceb';
+		// 				context.strokeRect(rect.x, rect.y, rect.width, rect.height);
+		// 				context.font = '11px Helvetica';
+		// 				context.fillStyle = "#fff";
+		// 				context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
+		// 				context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
 						
-						if (process_snapshot == false)
-						{
-							if (rect.width >= 150)
-							{
-								process_snapshot = true;
-								wait_snapshot = true;
-								availiable_snapshot = 2;
-								$("#snapshotButton").show();
-								sleep(1000).then(() => {
-									// Do something after the sleep!
-									wait_snapshot = false;
-									snapshot();
-								})
-							}
-							else
-							{	
-								if (wait_snapshot == false)
-								{
-									availiable_snapshot = 1;
-									$("#snapshotButton").hide();
-								}
-							}
-						}
-					});
-				}
-			});
-		};
+		// 				if (process_snapshot == false)
+		// 				{
+		// 					if (rect.width >= 150)
+		// 					{
+		// 						process_snapshot = true;
+		// 						wait_snapshot = true;
+		// 						availiable_snapshot = 2;
+		// 						$("#snapshotButton").show();
+		// 						sleep(1000).then(() => {
+		// 							// Do something after the sleep!
+		// 							wait_snapshot = false;
+		// 							snapshot();
+		// 						})
+		// 					}
+		// 					else
+		// 					{	
+		// 						if (wait_snapshot == false)
+		// 						{
+		// 							availiable_snapshot = 1;
+		// 							$("#snapshotButton").hide();
+		// 						}
+		// 					}
+		// 				}
+		// 			});
+		// 		}
+		// 	});
+		// };
 
-		//Take Snapshot
-		function snapshot() {
-			$("#snapshotButton").hide();
+	// 	//Take Snapshot
+	// 	function snapshot() {
+	// 		$("#snapshotButton").hide();
 
-			if (availiable_snapshot == 2)
-			{
-				video.pause();
+	// 		if (availiable_snapshot == 2)
+	// 		{
+	// 			video.pause();
 
-				document.getElementById('resultInfo').innerHTML = '서버에 데이터를 저장중입니다.' + '<br>';
-				process_snapshot = takeSnapshot();
-			}
-			else if (availiable_snapshot == 1)
-			{
-				alert("Detected face is small");
-			}
-			else
-			{
-				//alert("No face is detected");
-			}
-		}
+	// 			document.getElementById('resultInfo').innerHTML = '서버에 데이터를 저장중입니다.' + '<br>';
+	// 			process_snapshot = takeSnapshot();
+	// 		}
+	// 		else if (availiable_snapshot == 1)
+	// 		{
+	// 			alert("Detected face is small");
+	// 		}
+	// 		else
+	// 		{
+	// 			//alert("No face is detected");
+	// 		}
+	// 	}
 
-		function webcamOn()
-		{
-			iswebcamOn = true;
-		}
+	// 	function webcamOn()
+	// 	{
+	// 		iswebcamOn = true;
+	// 	}
 		
-		function webcamOff()
-		{
-			iswebcamOn = false;
-		}
+	// 	function webcamOff()
+	// 	{
+	// 		iswebcamOn = false;
+	// 	}
 
-		function sleep (time) {
-  			return new Promise((resolve) => setTimeout(resolve, time));
-		}
-	</script>
+	// 	function sleep (time) {
+  	// 		return new Promise((resolve) => setTimeout(resolve, time));
+	// 	}
+	// </script>
 
 	<!-- Hidden form and button to upload image on server -->
 	<div id="snapshotButton">
