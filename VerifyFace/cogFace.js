@@ -6,8 +6,9 @@ var faceList = getFaceList();
 
 // Get FaceID Using Cognivite API Service
 var imgName = "testimage.jpg"
-function getFaceId(imgName) {
-	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName;
+function getFaceId(imgName2) {
+	var imgName2 = "testimage.jpg"
+	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName2;
 
 	$(function() {
 		var params = {
