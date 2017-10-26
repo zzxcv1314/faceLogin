@@ -3,13 +3,10 @@
 
 var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var faceList = getFaceList();
-var afaceID = getFaceId();
-var vefi = verifyFace(afaceID);
-
 
 // Get FaceID Using Cognivite API Service
 
-function getFaceId() {
+function getFaceId(imgName2) {
 	var imgName2 = "testimage3.jpg"
 	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName2;
 
