@@ -45,12 +45,8 @@ function getFaceId(imgName2) {
 			document.getElementById('resultInfo').innerHTML += '<br>' + '[result]' + '<br>';
 
 			document.getElementById('resultInfo').innerHTML += faceId[1];
-			
-
-
 
 			
-
 
 		})
 		.fail(function() {
@@ -59,7 +55,7 @@ function getFaceId(imgName2) {
 		});
 	});
 
-	return faceId[1];
+	return faceId;
 }
 
 
