@@ -4,6 +4,7 @@
 var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var faceList = getFaceList();
 var imgName2 = "testimage";
+var faceId;
 var faceid = getFaceId(imgName2);
 verifyFace(faceid);
 
@@ -38,7 +39,7 @@ function getFaceId(imgName2) {
 		})
 		.done(function(data) {
 			var str = JSON.stringify(data);
-			var faceId = str.split(":").toString().split(",");
+			faceId = str.split(":").toString().split(",");
 
 			document.getElementById('resultInfo').innerHTML += '<br>' + '[result]' + '<br>';
 
