@@ -55,7 +55,6 @@ function getFaceId(imgName2) {
 		});
 	});
 
-	return faceId[1];
 }
 
 
