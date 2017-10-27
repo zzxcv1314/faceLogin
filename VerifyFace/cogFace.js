@@ -42,7 +42,8 @@ function getFaceId(imgName2) {
 
 			document.getElementById('resultInfo').innerHTML += '<br>' + '[result]' + '<br>';
 
-			document.getElementById('resultInfo').innerHTML += faceId;
+			document.getElementById('resultInfo').innerHTML += faceId[1];
+			
 
 
 
