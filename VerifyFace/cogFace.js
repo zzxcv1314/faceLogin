@@ -4,7 +4,7 @@
 var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var faceList = getFaceList();
 var imgName2 = "testimage";
-
+getFaceId(imgName2);
 
 
 
@@ -32,7 +32,7 @@ function getFaceId(imgName2) {
 				xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key",subscriptionKey);
 			},
 			type: "POST",
-			async: false,
+			async: true,
 			// Request body
 			data: "{" + 
 				"\"url\":\"" + imgPath + 
@@ -58,7 +58,7 @@ function getFaceId(imgName2) {
 	return faceId[1];
 }
 
-var y = getFaceId(imgName2);
+
 
 
 
