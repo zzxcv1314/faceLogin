@@ -3,7 +3,7 @@
 
 var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var faceList = getFaceList();
-var imgName2 = "ddd";
+var imgName2 = "testimage";
 getFaceId(imgName2);
 
 
