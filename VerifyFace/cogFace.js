@@ -38,7 +38,7 @@ function getFaceId(imgName2) {
 		})
 		.done(function(data) {
 			var str = JSON.stringify(data);
-			faceId = str.split(":").toString().split(",");
+			var faceId = str.split(":").toString().split(",");
 
 			document.getElementById('resultInfo').innerHTML += '<br>' + '[result]' + '<br>';
 
