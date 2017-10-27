@@ -13,7 +13,7 @@ verifyFace(faceid);
 // Get FaceID Using Cognivite API Service
 
 function getFaceId(imgName2) {
-	var faceId;
+	var faceId = new Array();
 	var imgName2 = "testimage3.jpg"
 	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName2;
 
