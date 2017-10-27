@@ -4,16 +4,16 @@
 var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var faceList = getFaceList();
 var imgName2 = "testimage";
-
 var faceid = getFaceId(imgName2);
 verifyFace(faceid);
+var faceId = new Array();
 
 
 
 // Get FaceID Using Cognivite API Service
 
 function getFaceId(imgName2) {
-	var faceId = new Array();
+	
 	var imgName2 = "testimage3.jpg"
 	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName2;
 
@@ -98,8 +98,7 @@ function verifyFace(faceId) {
 					document.getElementById('resultInfo').innerHTML += faceList[x].userData + '<br>';
 				}
 			}
-			
-
+		
 			uploadData();
 
 		})
