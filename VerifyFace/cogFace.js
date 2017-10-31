@@ -13,7 +13,7 @@ getFaceId(imgName2);
 // Get FaceID Using Cognivite API Service
 
 function getFaceId(imgName2) {
-	var faceId;
+	var returnValue; 
 	var imgName2 = "testimage3.jpg"
 	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName2;
 
@@ -46,6 +46,8 @@ function getFaceId(imgName2) {
 
 			document.getElementById('resultInfo').innerHTML += faceId[1];
 
+			returnValue = faceId[1];
+
 			
 
 		})
@@ -55,7 +57,7 @@ function getFaceId(imgName2) {
 		});
 	});
 
-	return faceId[1];
+	return returnValue;
 }
 
 
