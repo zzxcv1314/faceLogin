@@ -32,7 +32,7 @@ function getFaceId(imgName2) {
 				xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key",subscriptionKey);
 			},
 			type: "POST",
-			async: true,
+			async: false,
 			// Request body
 			data: "{" + 
 				"\"url\":\"" + imgPath + 
