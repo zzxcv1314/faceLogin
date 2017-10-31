@@ -6,7 +6,7 @@ var faceList = getFaceList();
 var imgName2 = "testimage";
 getFaceId(imgName2);
 var returnValue; 
-verifyFace(returnValue);
+
 
 // Get FaceID Using Cognivite API Service
 
@@ -102,6 +102,8 @@ function verifyFace(returnValue) {
 		});
 	});
 }
+
+verifyFace(returnValue);
 
 function uploadData(){
 	var time = new Date();
