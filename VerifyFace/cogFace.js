@@ -5,8 +5,6 @@ var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
 var imgName2 = "testimage";
 var returnValue; 
 
-
-
 // Get FaceID Using Cognivite API Service
 
 function getFaceId(imgName2) {
@@ -45,7 +43,7 @@ function getFaceId(imgName2) {
 
 			returnValue = faceId[1];
 
-			
+			verifyFace(returnValue); 
 
 		})
 		.fail(function() {
@@ -171,4 +169,3 @@ function getFaceList() {
 
 var faceList = getFaceList();
 getFaceId(imgName2);
-verifyFace(returnValue);
