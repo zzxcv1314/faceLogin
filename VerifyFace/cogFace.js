@@ -88,7 +88,7 @@ function verifyFace(returnValue) {
 
 			for (x = 0; x < faceList.length; x++) {
 				if (data[0].persistedFaceId == faceList[x].persistedFaceId) {
-					document.getElementById('resultInfo').innerHTML += faceList[x].persistedFaceId;
+					document.getElementById('resultInfo').innerHTML += faceList[x].persistedFaceId + '<br>';
 					document.getElementById('resultInfo').innerHTML += faceList[x].userData + '<br>';
 				}
 			}
