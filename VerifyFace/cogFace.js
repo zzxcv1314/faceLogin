@@ -2,10 +2,9 @@
 // Using cognitive Face API service for verifing face in JavaScript
 
 var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
-var faceList = getFaceList();
 var imgName2 = "testimage";
-getFaceId(imgName2);
 var returnValue; 
+
 
 
 // Get FaceID Using Cognivite API Service
@@ -61,7 +60,7 @@ function getFaceId(imgName2) {
 
 function verifyFace(returnValue) {
 	var faceListId = "test";
-
+	var retval  = returnValue;
 	$(function() {
 		var params = {
 			// Request parameters
@@ -78,7 +77,7 @@ function verifyFace(returnValue) {
 			async: false,
 			// Request body
 			data: "{" +
-				"\"faceID\":" + returnValue + "," +
+				"\"faceID\":" + retval + "," +
 				"\"faceListID\":\"" + faceListId + "\"," +
 				"\"maxNumOfCandidatesReturned\":" + 10 + "," +
 				"\"mode\":\"matchPerson\"" +
@@ -103,7 +102,7 @@ function verifyFace(returnValue) {
 	});
 }
 
-verifyFace(returnValue);
+
 
 function uploadData(){
 	var time = new Date();
@@ -169,3 +168,7 @@ function getFaceList() {
 
 	return faceList;
 }
+
+var faceList = getFaceList();
+getFaceId(imgName2);
+verifyFace(returnValue);
