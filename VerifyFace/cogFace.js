@@ -6,7 +6,7 @@ var imgName2 = "testimage";
 var returnValue; 
 
 var faceList = getFaceList();
-getFaceId(imgName2);
+
 // Get FaceID Using Cognivite API Service
 
 function getFaceId(imgName2) {
@@ -160,6 +160,8 @@ function getFaceList() {
 				document.getElementById("resultInfo").innerHTML += x + " " + data[x][0].persistedFaceId + "<br>";
 			}
 			*/
+
+			getFaceId(imgName2);
 		})
 		.fail(function() {
 			alert("error");
