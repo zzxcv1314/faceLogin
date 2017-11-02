@@ -11,7 +11,7 @@ var faceList = getFaceList();
 
 function getFaceId(imgName2) {
 	
-	var imgName2 = "testimage3.jpg"
+	var imgName2 = "testimage.jpg"
 	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName2;
 
 	$(function() {
