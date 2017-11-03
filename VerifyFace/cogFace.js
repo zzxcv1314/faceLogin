@@ -27,7 +27,7 @@ oReq.open("get", "test2.php", true);
 oReq.send();
 
 function getFaceId(imgName2) {
-	
+	aaa = aaa.trim(); 
 	var imgName2 = aaa;
 	var imgPath = "https://loginwithface.azurewebsites.net/VerifyFace/data/"+ imgName2;
 
