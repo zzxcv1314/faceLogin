@@ -12,20 +12,19 @@ var faceList = getFaceList();
 var aaa; 
 function reqListener () {
       console.log(this.responseText);
-      aaa = this.responseText;
-    }
-
-    var oReq = new XMLHttpRequest(); //New request object
-    oReq.onload = function() {
+      }
+var oReq = new XMLHttpRequest(); //New request object
+oReq.onload = function() {
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
-        alert(this.responseText); //Will alert: 42
-    };
-    oReq.open("get", "test2.php", true);
+alert(this.responseText); //Will alert: 42
+aaa = this.responseText; 
+};
+oReq.open("get", "test2.php", true);
     //                               ^ Don't block the rest of the execution.
     //                                 Don't wait until the request finishes to 
     //                                 continue.
-    oReq.send();
+oReq.send();
 
 function getFaceId(imgName2) {
 	
