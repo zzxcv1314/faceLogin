@@ -1,4 +1,4 @@
-<script>
+
 // cogFace
 // Using cognitive Face API service for verifing face in JavaScript
 
@@ -188,4 +188,3 @@ function getFaceList() {
 	return faceList;
 }
 
-</script>
