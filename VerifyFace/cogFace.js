@@ -17,7 +17,7 @@ var oReq = new XMLHttpRequest(); //New request object
 oReq.onload = function() {
         //This is where you handle what to do with the response.
         //The actual data is found on this.responseText
-alert(this.responseText); //Will alert: 42
+//alert(this.responseText); //Will alert: 42
 aaa = this.responseText; 
 };
 oReq.open("get", "test2.php", true);
@@ -28,7 +28,7 @@ oReq.send();
 
 function getFaceId(imgName2) {
 	
-	var imgName2 = "testimage.jpg"
+	var imgName2 = aaa;
 	var imgPath = "https://loginwithface.azurewebsites.net/VerifyFace/data/"+ imgName2;
 
 	$(function() {
