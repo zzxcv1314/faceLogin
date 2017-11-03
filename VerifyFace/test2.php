@@ -1,6 +1,6 @@
   <?
     // 폴더명 지정
-    $dir = "VerifyFace/data/";
+    $dir = "data/";
 
     // 핸들 획득
     $handle  = opendir($dir);
