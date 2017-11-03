@@ -23,7 +23,7 @@ while (false !== ($filename = readdir($handle))) {
 closedir($handle);
  
 // 정렬, 역순으로 정렬하려면 rsort 사용
-sort($files);
+rsort($files);
  
 // 파일명을 출력한다.
 foreach ($files as $f) {
