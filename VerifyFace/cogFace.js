@@ -13,7 +13,7 @@ var faceList = getFaceList();
 function getFaceId(imgName2) {
 	
 	var imgName2 = "testimage.jpg"
-	var imgPath = "https://loginwithface.azurewebsites.net/EnrollFace/image/"+ imgName2;
+	var imgPath = "https://loginwithface.azurewebsites.net/VerifyFace/data/"+ imgName2;
 
 	$(function() {
 		var params = {

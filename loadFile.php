@@ -1,6 +1,6 @@
 <?php
 // 폴더명 지정
-$dir = "EnrollFace/image/";
+$dir = "VerifyFace/data/";
  
 // 핸들 획득
 $handle  = opendir($dir);
