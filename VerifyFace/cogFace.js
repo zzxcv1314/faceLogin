@@ -9,9 +9,10 @@ var returnValue;
 var faceList = getFaceList();
 
 // Get FaceID Using Cognivite API Service
-
+var aaa; 
 function reqListener () {
       console.log(this.responseText);
+      aaa = this.responseText;
     }
 
     var oReq = new XMLHttpRequest(); //New request object
