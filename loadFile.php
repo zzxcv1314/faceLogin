@@ -24,10 +24,10 @@ closedir($handle);
  
 // 정렬, 역순으로 정렬하려면 rsort 사용
 rsort($files);
- 
+echo $files[1]; 
 // 파일명을 출력한다.
-foreach ($files as $f) {
-    echo $f;
-    echo "<br />";
-} 
+//foreach ($files as $f) {
+  //  echo $f;
+    //echo "<br />";
+//} 
 ?>
