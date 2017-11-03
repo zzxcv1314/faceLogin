@@ -77,7 +77,8 @@ function getFaceId(imgName2) {
 
 function verifyFace(returnValue) {
 	var faceListId = "test";
-	var retval  = returnValue;
+    var retval  = returnValue;
+    var ddd; 
 	$(function() {
 		var params = {
 			// Request parameters
@@ -106,7 +107,8 @@ function verifyFace(returnValue) {
 			for (x = 0; x < faceList.length; x++) {
 				if (data[0].persistedFaceId == faceList[x].persistedFaceId) {
 					document.getElementById('resultInfo').innerHTML += faceList[x].persistedFaceId + '<br>';
-					document.getElementById('resultInfo').innerHTML += faceList[x].userData + '<br>';
+                    document.getElementById('resultInfo').innerHTML += faceList[x].userData + '<br>';
+                    ddd = faceList[x].userData;
 				}
 			}
 		
@@ -116,7 +118,8 @@ function verifyFace(returnValue) {
 		.fail(function() {
 			alert("error");
 		});
-	});
+    });
+    return ddd; 
 }
 
 
