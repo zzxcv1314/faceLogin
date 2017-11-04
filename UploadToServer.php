@@ -1,4 +1,7 @@
 <?php
+
+@ini_set(‘display_error’, ‘On’);
+@error_reporting(E_ALL);
   
     $file_path = "VerifyFace/data/";
      
