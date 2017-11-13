@@ -164,7 +164,7 @@ function getFaceList() {
 			data: "{body}",
 		})
 		.done(function(data) {
-			document.getElementById('resultInfo').innerHTML += '<br>' + 'Cognitive API Server에서 FaceList 불러오기를 완료했습니다.' + '<br>' + '[FaceList]' + '<br>';
+			document.getElementById('resultInfo').innerHTML += '<br>' + 'Cognitive API Server에서 FaceList 불러오기를 완료했습니다. 안녕안녕안녕안녕안녕' + '<br>' + '[FaceList]' + '<br>';
 
 			faceList = data['persistedFaces'];
 
