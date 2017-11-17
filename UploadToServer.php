@@ -84,6 +84,7 @@ function getFacelist(){
     echo "[facelist]<br />\n";
     //echo $body;
     $json2 = $body; 
+    echo $json2; 
     
 
 }
