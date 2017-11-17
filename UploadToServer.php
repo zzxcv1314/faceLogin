@@ -55,6 +55,7 @@ function callImage(){
 }
 
 echo $testimage; 
+/*
 getfacelist(); 
 getFaceId();
 verifyFace(); 
