@@ -141,7 +141,7 @@ function verifyFace(){
     global $json2; 
     global $body; 
     $faceid = "test"; 
-    $img_path = "https://loginwithface.azurewebsites.net/VerifyFace/data/20171106154948.jpg";
+    //$img_path = "https://loginwithface.azurewebsites.net/VerifyFace/data/20171106154948.jpg";
     $url = 'https://eastus.api.cognitive.microsoft.com/face/v1.0/findsimilars?';
     $data = array("faceID" => $faceiid, 
     "faceListID" => "test", "maxNumOfCandidatesReturned" => 10, 
@@ -164,7 +164,7 @@ function verifyFace(){
     $contents = curl_exec($ch);
     curl_close($ch);
     //echo "<br>[result]";
-    //echo $contents;
+    echo $contents;
     $json3 =json_decode($contents, true); 
     
     //echo $json3[0]['persistedFaceId'];
