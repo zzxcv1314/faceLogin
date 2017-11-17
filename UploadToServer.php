@@ -58,7 +58,7 @@ function callImage(){
 
 getfacelist(); 
 getFaceId();
-//verifyFace(); 
+verifyFace(); 
 $faceiid;
 $faceidverify; 
 $json2;
