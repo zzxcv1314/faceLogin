@@ -10,6 +10,9 @@ function uploadImage(){
     //안드로이드에서 VerifyFace/data/로 이미지를 보낸다.    
     $file_path = $file_path . basename( $_FILES['uploaded_file']['name']);
     if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $file_path)) {
+        getfacelist(); 
+        getFaceId();
+        verifyFace(); 
         echo "success";
 
     } else{
@@ -57,9 +60,9 @@ function callImage(){
 
  
 
-getfacelist(); 
-getFaceId();
-verifyFace(); 
+//getfacelist(); 
+//getFaceId();
+//verifyFace(); 
 $faceiid;
 $faceidverify; 
 $json2;
