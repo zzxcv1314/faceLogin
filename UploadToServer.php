@@ -4,6 +4,10 @@ callImage();
 $testimage; 
 function uploadImage(){
     global $testimage; 
+    global $faceiid;
+    global $faceidverify; 
+    global $json2;
+    global $body; 
     @ini_set(‘display_error’, ‘On’);
     @error_reporting(E_ALL);
   
