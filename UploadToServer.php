@@ -1,4 +1,5 @@
 <?php
+uploadImage(); 
 function uploadImage(){
     @ini_set(‘display_error’, ‘On’);
     @error_reporting(E_ALL);
