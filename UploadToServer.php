@@ -1,6 +1,7 @@
 <?php
 uploadImage(); 
 callImage(); 
+$testimage; 
 function uploadImage(){
     @ini_set(‘display_error’, ‘On’);
     @error_reporting(E_ALL);
@@ -53,7 +54,7 @@ function callImage(){
 
 }
 
-/*
+echo $testimage; 
 getfacelist(); 
 getFaceId();
 verifyFace(); 
