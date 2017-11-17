@@ -163,27 +163,23 @@ function verifyFace(){
     
     $contents = curl_exec($ch);
     curl_close($ch);
-    echo "<br>[result]";
-    echo $contents;
+    //echo "<br>[result]";
+    //echo $contents;
     $json3 =json_decode($contents, true); 
     
-    echo $json3[0]['persistedFaceId'];
+    //echo $json3[0]['persistedFaceId'];
 
-    echo "<br><br><br><br>"; 
+    //echo "<br><br><br><br>"; 
     $json2 = json_decode($body, true); 
     
     
-    echo "<br>"; 
-    echo $json3[0]['persistedFaceId'];
-    echo "<br>";
-    echo $json2['persistedFaces'][1]['userData'];
+    //echo "<br>"; 
+    //echo $json3[0]['persistedFaceId'];
+    //echo "<br>";
+    //echo $json2['persistedFaces'][1]['userData'];
 
-    echo "<br>";
-    echo count($json2); 
-
-    if(($json3[0]['persistedFaceId'])== $json2['persistedFaces'][4]['persistedFaceId']){
-        echo "1"; 
-    }
+    //echo "<br>";
+    //echo count($json2); 
 
     for($i=0; $i<=count($json2); $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
