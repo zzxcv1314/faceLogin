@@ -19,11 +19,11 @@ function uploadImage(){
     $file_path = $file_path . basename( $_FILES['uploaded_file']['name']);
     if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $file_path)) {
         getfacelist(); 
-        echo "success";
+        //echo "success";
 
     } else{
         getfacelist(); 
-        echo "fail";
+        //echo "fail";
     }
 }
 
@@ -54,7 +54,7 @@ function callImage(){
 
     // 정렬, 역순으로 정렬하려면 rsort 사용
     rsort($files);
-    echo $files[0]; 
+    //echo $files[0]; 
     // 파일명을 출력한다.
     //foreach ($files as $f) {
     //  echo $f;
@@ -93,7 +93,7 @@ function getFacelist(){
         curl_setopt($ch, CURLOPT_URL, "https://eastus.api.cognitive.microsoft.com/face/v1.0/facelists/test?&{body}");
     $body = curl_exec($ch);
     curl_close($ch);
-    echo "[facelist]<br />\n";
+    //echo "[facelist]<br />\n";
     //echo $body;
     $json2 = $body; 
     getfaceId(); 
@@ -126,10 +126,10 @@ function getFaceId(){
     
     $contents = curl_exec($ch);
     curl_close($ch);
-    echo "<br> [faceid]";
+    //echo "<br> [faceid]";
     $json = json_decode($contents, true); 
     
-    echo $json[0]['faceId'];
+    //echo $json[0]['faceId'];
     $faceiid = $json[0]['faceId'];
    
     verifyFace(); 
@@ -187,7 +187,7 @@ function verifyFace(){
 
     for($i=0; $i<=count($json2); $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
-            echo $json2['persistedFaces'][$i]['persistedFaceId'];
+            //echo $json2['persistedFaces'][$i]['persistedFaceId'];
             echo $json2['persistedFaces'][$i]['userData'];
         }
 
