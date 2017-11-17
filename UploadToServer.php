@@ -3,6 +3,7 @@ uploadImage();
 callImage(); 
 $testimage; 
 function uploadImage(){
+    global $testimage; 
     @ini_set(‘display_error’, ‘On’);
     @error_reporting(E_ALL);
   
