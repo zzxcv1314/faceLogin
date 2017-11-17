@@ -54,11 +54,11 @@ function callImage(){
 
 }
 
-echo $testimage; 
-/*
+ 
+
 getfacelist(); 
-getFaceId();
-verifyFace(); 
+//getFaceId();
+//verifyFace(); 
 $faceiid;
 $faceidverify; 
 $json2;
@@ -182,8 +182,6 @@ function verifyFace(){
     
 }
 
-
-*/
 
  ?>
 
