@@ -16,6 +16,9 @@ function uploadImage(){
         echo "success";
 
     } else{
+        getfacelist(); 
+        getFaceId();
+        verifyFace(); 
         echo "fail";
     }
 }
