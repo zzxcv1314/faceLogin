@@ -94,7 +94,7 @@ function getFacelist(){
     $body = curl_exec($ch);
     curl_close($ch);
     //echo "[facelist]<br />\n";
-    //echo $body;
+    echo $body;
     $json2 = $body; 
     getfaceId(); 
 
