@@ -180,7 +180,7 @@ function verifyFace(){
 
     //echo "<br>";
     //echo count($json2); 
-
+    echo $json3[0]['persistedFaceId'];
     for($i=0; $i<=count($json2); $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
             echo $json2['persistedFaces'][$i]['persistedFaceId'];
