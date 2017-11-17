@@ -1,7 +1,10 @@
 <?php
 uploadImage(); 
-callImage(); 
+
 $testimage; 
+$faceiid; 
+$faceidverify; 
+$body; 
 function uploadImage(){
     global $testimage; 
     global $faceiid;
@@ -10,20 +13,16 @@ function uploadImage(){
     global $body; 
     @ini_set(‘display_error’, ‘On’);
     @error_reporting(E_ALL);
-  
+    callImage(); 
     $file_path = "VerifyFace/data/";
     //안드로이드에서 VerifyFace/data/로 이미지를 보낸다.    
     $file_path = $file_path . basename( $_FILES['uploaded_file']['name']);
     if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $file_path)) {
         getfacelist(); 
-        getFaceId();
-        verifyFace(); 
         echo "success";
 
     } else{
         getfacelist(); 
-        getFaceId();
-        verifyFace(); 
         echo "fail";
     }
 }
@@ -63,6 +62,7 @@ function callImage(){
     //} 
     $testimage = $files[0]; 
     $testimage = trim($testimage); 
+    
 
 }
 
@@ -96,6 +96,8 @@ function getFacelist(){
     echo "[facelist]<br />\n";
     //echo $body;
     $json2 = $body; 
+    getfaceId(); 
+
     
 }
 
@@ -130,7 +132,7 @@ function getFaceId(){
     echo $json[0]['faceId'];
     $faceiid = $json[0]['faceId'];
    
-
+    verifyFace(); 
     
 }
 
