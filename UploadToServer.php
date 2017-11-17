@@ -164,7 +164,7 @@ function verifyFace(){
     $contents = curl_exec($ch);
     curl_close($ch);
     //echo "<br>[result]";
-    echo $contents;
+    //echo $contents;
     $json3 =json_decode($contents, true); 
     
     //echo $json3[0]['persistedFaceId'];
@@ -179,12 +179,12 @@ function verifyFace(){
     //echo $json2['persistedFaces'][1]['userData'];
 
     //echo "<br>";
-    echo count($json2); 
-    echo $json3[0]['persistedFaceId'];
+    //echo count($json2); 
+    //echo $json3[0]['persistedFaceId'];
     
     for($i=0; $i<=10; $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
-            echo $json2['persistedFaces'][$i]['persistedFaceId'];
+            //echo $json2['persistedFaces'][$i]['persistedFaceId'];
             echo $json2['persistedFaces'][$i]['userData'];
         }
 
