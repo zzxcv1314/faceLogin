@@ -13,7 +13,7 @@ function uploadImage(){
         echo "fail";
     }
 }
-
+/*
 function callImage(){
     global $testimage; 
     // 폴더명 지정
@@ -50,7 +50,8 @@ function callImage(){
     $testimage = $files[0]; 
 
 }
-
+*/
+/*
 getfacelist(); 
 getFaceId();
 verifyFace(); 
@@ -178,7 +179,7 @@ function verifyFace(){
 }
 
 
-
+*/
 
  ?>
 
