@@ -182,7 +182,7 @@ function verifyFace(){
     echo count($json2); 
     echo $json3[0]['persistedFaceId'];
     
-    for($i=0; $i<=count($json2); $i++){
+    for($i=0; $i<=10; $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
             echo $json2['persistedFaces'][$i]['persistedFaceId'];
             echo $json2['persistedFaces'][$i]['userData'];
