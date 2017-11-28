@@ -139,6 +139,7 @@ function verifyFace(){
     global $faceiid;
     global $json2; 
     global $body; 
+    $flag=0; 
     $faceid = "test"; 
     //$img_path = "https://loginwithface.azurewebsites.net/VerifyFace/data/20171106154948.jpg";
     $url = 'https://eastus.api.cognitive.microsoft.com/face/v1.0/findsimilars?';
@@ -181,17 +182,18 @@ function verifyFace(){
     //echo count($json2); 
     //echo $json3[0]['persistedFaceId'];
     $json2['persistedFaces'][1]['persistedFaceId'];
-    for($i=0; $i<=30; $i++){
+    for($i=0; $i<=10; $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
             //echo $json2['persistedFaces'][$i]['persistedFaceId'];
             
             echo $json2['persistedFaces'][$i]['userData'];
             if(empty($json2['persistedFaces'][$i]['userData'])){
-                echo"notuser";
+                $flag=$i;
             }
         }
 
     }
+    echo $json2['persistedFaces'][$flag]['userData'];
 
 }
 
