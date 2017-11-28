@@ -20,12 +20,10 @@ function uploadImage(){
     if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $file_path)) {
         getfacelist(); 
         //echo "success";
-        echo "imageuploadsuccess";
 
     } else{
         getfacelist(); 
         //echo "fail";
-        echo "imageuploadfail";
     }
 }
 
@@ -98,7 +96,6 @@ function getFacelist(){
     //echo "[facelist]<br />\n";
     //echo $body;
     $json2 = $body; 
-    echo "getfacelistsuccess";
     getfaceId(); 
 
     
@@ -134,7 +131,6 @@ function getFaceId(){
     
     //echo $json[0]['faceId'];
     $faceiid = $json[0]['faceId'];
-   echo "getfaceidsuccess";
     verifyFace(); 
     
 }
@@ -185,14 +181,13 @@ function verifyFace(){
     //echo count($json2); 
     //echo $json3[0]['persistedFaceId'];
     $json2['persistedFaces'][1]['persistedFaceId'];
-    for($i=0; $i<=10; $i++){
+    for($i=0; $i<=30; $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
             //echo $json2['persistedFaces'][$i]['persistedFaceId'];
             echo $json2['persistedFaces'][$i]['userData'];
         }
 
     }
-    echo "verifyfacesucceess";
 
 }
 
