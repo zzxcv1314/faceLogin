@@ -192,6 +192,7 @@ function verifyFace(){
         }
 
     }
+    echo "verifyfacesucceess";
 
 }
 
