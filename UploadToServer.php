@@ -188,12 +188,15 @@ function verifyFace(){
             
             echo $json2['persistedFaces'][$i]['userData'];
             if(empty($json2['persistedFaces'][$i]['userData'])){
-                $flag=$i;
+                $flag=1; 
             }
         }
 
     }
-    echo $json2['persistedFaces'][$flag]['userData'];
+    if($flag==1){
+        echo "notuser";
+        $flag=0;
+    }
 
 }
 
