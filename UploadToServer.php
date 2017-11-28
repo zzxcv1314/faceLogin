@@ -184,7 +184,11 @@ function verifyFace(){
     for($i=0; $i<=30; $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
             //echo $json2['persistedFaces'][$i]['persistedFaceId'];
+            
             echo $json2['persistedFaces'][$i]['userData'];
+            if(empty($json2['persistedFaces'][$i]['userData'])){
+                echo"notuser";
+            }
         }
 
     }
