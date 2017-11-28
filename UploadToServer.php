@@ -20,10 +20,12 @@ function uploadImage(){
     if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $file_path)) {
         getfacelist(); 
         //echo "success";
+        echo "imageuploadsuccess";
 
     } else{
         getfacelist(); 
         //echo "fail";
+        echo "imageuploadfail";
     }
 }
 
@@ -96,6 +98,7 @@ function getFacelist(){
     //echo "[facelist]<br />\n";
     //echo $body;
     $json2 = $body; 
+    echo "getfacelistsuccess";
     getfaceId(); 
 
     
@@ -131,7 +134,7 @@ function getFaceId(){
     
     //echo $json[0]['faceId'];
     $faceiid = $json[0]['faceId'];
-   
+   echo "getfaceidsuccess";
     verifyFace(); 
     
 }
