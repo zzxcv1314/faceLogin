@@ -87,7 +87,7 @@ function getFacelist(){
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
-        'Ocp-Apim-Subscription-Key: 7e5660b766684dcebe662b790edac7a4'
+        'Ocp-Apim-Subscription-Key:ecb40364cf9d439eb9a82d96d9dd8afc'
         ));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);   
         curl_setopt($ch, CURLOPT_URL, "https://eastus.api.cognitive.microsoft.com/face/v1.0/facelists/test?&{body}");
@@ -121,7 +121,7 @@ function getFaceId(){
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
-        'Ocp-Apim-Subscription-Key: 7e5660b766684dcebe662b790edac7a4'
+        'Ocp-Apim-Subscription-Key: ecb40364cf9d439eb9a82d96d9dd8afc'
         ));
     
     $contents = curl_exec($ch);
@@ -158,7 +158,7 @@ function verifyFace(){
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
-        'Ocp-Apim-Subscription-Key: 7e5660b766684dcebe662b790edac7a4'
+        'Ocp-Apim-Subscription-Key: ecb40364cf9d439eb9a82d96d9dd8afc'
         ));
     
     $contents = curl_exec($ch);

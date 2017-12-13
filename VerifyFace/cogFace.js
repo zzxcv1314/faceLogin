@@ -2,7 +2,7 @@
 // cogFace
 // Using cognitive Face API service for verifing face in JavaScript
 
-var subscriptionKey = "7e5660b766684dcebe662b790edac7a4";
+var subscriptionKey = "ecb40364cf9d439eb9a82d96d9dd8afc";
 var imgName2 = "testimage";
 var returnValue; 
 
