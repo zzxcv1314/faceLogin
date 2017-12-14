@@ -97,7 +97,7 @@ function getFaceId(){
 
     $someArray = $faceemo; // Replace ... with your PHP Array
     foreach ($someArray as $key => $value) {
-      echo $value["emotion"] . "<br>";
+      echo $value->emotion;
     }
 
 }
