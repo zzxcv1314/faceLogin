@@ -183,6 +183,7 @@ function verifyFace(){
     echo "<br>"; 
     echo $json3[0]['persistedFaceId'];
     echo "<br>";
+    print_r($json3);
     $json2['persistedFaces'][1]['persistedFaceId'];
     for($i=0; $i<=10; $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
