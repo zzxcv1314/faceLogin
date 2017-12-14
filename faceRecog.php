@@ -104,7 +104,7 @@ function getFaceId(){
         
     };
 
-    echo 
+
 
 }
 
