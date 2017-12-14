@@ -174,14 +174,14 @@ function verifyFace(){
     
     
     //echo "<br>"; 
-    //echo $json3[0]['persistedFaceId'];
-    //echo "<br>";
-    //echo $json2['persistedFaces'][1]['userData'];
+    echo $json3[0]['persistedFaceId'];
+    echo "<br>";
+    echo $json2['persistedFaces'][1]['userData'];
 
-    //echo "<br>";
+    echo "<br>";
     echo count($json2);
     echo "<br>"; 
-    echo $json3[0]['persistedFaceId']['userData'];
+    echo $json3[0]['persistedFaceId'];
     echo "<br>";
     $json2['persistedFaces'][1]['persistedFaceId'];
     for($i=0; $i<=10; $i++){
