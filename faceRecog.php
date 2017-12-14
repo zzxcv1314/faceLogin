@@ -89,7 +89,6 @@ function getFaceId(){
     $faceiid = $json[0]['faceId'];
     $faceatt = $json[0]['faceAttributes'];
     echo $faceiid; 
-    echo $json[0];
     echo $faceatt; 
     
 }
