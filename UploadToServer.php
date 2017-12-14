@@ -181,7 +181,7 @@ function verifyFace(){
             //echo $json2['persistedFaces'][$i]['persistedFaceId'];
             
             echo $json2['persistedFaces'][$i]['userData'];
-            echo $json3[0]['confidence'];
+            //echo $json3[0]['confidence'];
             if(empty($json2['persistedFaces'][$i]['userData'])){
                 $flag=1; 
             }
