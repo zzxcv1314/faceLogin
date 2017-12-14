@@ -101,7 +101,7 @@ function getFaceId(){
     {
         echo "$key: $value\n";
     };
-    };
+    
 
 }
 
