@@ -90,7 +90,7 @@ function getFaceId(){
     $faceatt = $json[0]['faceAttributes']['age'];
     
     rsort($json[0]['faceAttributes']['emotion']);
-    echo $json[0]['faceAttributes']['emotion'];
+    echo $json[0]['faceAttributes']['emotion'][1];
     echo $faceemo; 
     echo $faceatt; 
     
