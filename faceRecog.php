@@ -94,6 +94,7 @@ function getFaceId(){
     echo $faceemo; 
     echo $faceatt; 
     echo $faceemo -> emotion;
+    print_r($faceemo);
 
 }
 
