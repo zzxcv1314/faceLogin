@@ -83,7 +83,7 @@
 						context.fillStyle = "#fff";
 						context.fillText('x: ' + rect.x + 'px', rect.x + rect.width + 5, rect.y + 11);
 						context.fillText('y: ' + rect.y + 'px', rect.x + rect.width + 5, rect.y + 22);
-						document.getElementById('trackInfo').innerHTML = rect.width + '*' + rect.height;
+						//document.getElementById('trackInfo').innerHTML = rect.width + '*' + rect.height;
 						
 						if (process_snapshot == false)
 						{
@@ -144,27 +144,30 @@
 		
 	</div>
 	<div id="sidebar">
+			<div id="a">
+					<br>
+					<h3>ID : <input type="text"></h3>
+					
+					<h3>Center : <input type="text"></h3>
+					
+					<h3>health data : <br>  <input type="checkbox" name="vehicle" value="Bike"> ENT Clinic<br>
+					<input type="checkbox" name="vehicle" value="Car" checked> internal medicine</h3>
+				</div>
+				<div id="EnrollInfo">
+						<form id="myform" method="post" action="upload.php">
+								<h3>
+								Username : <input type="text" name="usrname" id="usrname"><br><br>
+								<input type=button id="snapshotButton" value="Take Snapshot" onClick="snapshot()">
+								</h3>
+							</form>
+				</div>
 		
-		<div id="a">
-			<br>
-			<h3>ID : <input type="text"></h3>
-			
-			<h3>Center : <input type="text"></h3>
-			
-			<h3>health data : <br>  <input type="checkbox" name="vehicle" value="Bike"> ENT Clinic<br>
-			<input type="checkbox" name="vehicle" value="Car" checked> internal medicine</h3>
-		</div>
-		<div id="EnrollInfo">
-				<form id="myform" method="post" action="upload.php">
-						<h3>
-						Username : <input type="text" name="usrname" id="usrname"><br><br>
-						<input type=button id="snapshotButton" value="Take Snapshot" onClick="snapshot()">
-						</h3>
-					</form>
-		</div>
 	</div>
 	<div id="content">
-		
+		<div class="track">
+			<p id="trackInfo"> </p>
+		</div>
+
 		<div class="result">
 			<p id="resultInfo"> </p>
 		</div>
