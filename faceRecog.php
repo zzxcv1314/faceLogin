@@ -93,11 +93,7 @@ function getFaceId(){
     
     echo $faceemo; 
     echo $faceatt; 
-    foreach($faceemo->emotion as $values)
-    {
-        echo $values . "\n";
-    }
-
+    echo $faceemo -> emotion;
 
 }
 
