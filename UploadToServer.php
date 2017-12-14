@@ -174,22 +174,14 @@ function verifyFace(){
     
     
     //echo "<br>"; 
-    echo $json3[0]['persistedFaceId'];
-    echo "<br>";
-    echo $json2['persistedFaces'][1]['userData'];
-
-    echo "<br>";
-    echo count($json2);
-    echo "<br>"; 
-    echo $json3[0]['persistedFaceId'];
-    echo "<br>";
-    print_r($json3);
+    
     $json2['persistedFaces'][1]['persistedFaceId'];
     for($i=0; $i<=10; $i++){
         if($json3[0]['persistedFaceId'] == $json2['persistedFaces'][$i]['persistedFaceId']){
             //echo $json2['persistedFaces'][$i]['persistedFaceId'];
             
             echo $json2['persistedFaces'][$i]['userData'];
+            echo $json3[0]['confidence'];
             if(empty($json2['persistedFaces'][$i]['userData'])){
                 $flag=1; 
             }
