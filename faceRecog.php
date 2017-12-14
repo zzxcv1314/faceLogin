@@ -93,7 +93,7 @@ function getFaceId(){
     
     
     echo $faceatt; 
-    print_r($faceemo);
+   // print_r($faceemo);
 
     $someArray = $json; // Replace ... with your PHP Array
  
