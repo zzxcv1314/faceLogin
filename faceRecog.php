@@ -1,11 +1,10 @@
 <?php
 
-
 $testimage; 
 $faceiid; 
 $faceidverify; 
 $body; 
-
+callImage(); 
 function callImage(){
     global $testimage; 
     // 폴더명 지정
