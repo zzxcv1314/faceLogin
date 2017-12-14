@@ -95,10 +95,13 @@ function getFaceId(){
     echo $faceatt; 
     print_r($faceemo);
 
-    $someArray = $faceemo; // Replace ... with your PHP Array
-    foreach ($someArray as $key => $value) {
-      echo $value->emotion;
-    }
+    $someArray = $json; // Replace ... with your PHP Array
+ 
+    foreach ($json[0]['faceAttributes']['emotion'] as $key => $value)
+    {
+        echo "$key: $value\n";
+    };
+    };
 
 }
 
