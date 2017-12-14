@@ -11,6 +11,16 @@
 		body{
 			background-color:#30472F;
 		}
+		#wrap{width:1000px;}
+
+		#header{width:1000px; float:left;}
+
+		#sidebar{width:300px; float:left;}
+
+		#content{width:700px; float:left;}
+
+		#footer{width:1000px; float:left;}
+
 	</style>
 </head>
 <body>
@@ -121,18 +131,21 @@
 	</script>
 
 	<!-- Hidden form and button to upload image on server -->
-	<div id="logo">
+	<div id="wrap">
+	<div id="header">
 			<img src="a.jpg">
 		
 	</div>
 	
 	<div id="EnrollInfo">
 			<form id="myform" method="post" action="upload.php">
-					<img src="a.jpg">
+					
 					Username: <input type="text" name="usrname" id="usrname"><br>
 					<input type=button id="snapshotButton" value="Take Snapshot" onClick="snapshot()">
 				</form>
 	</div>
+
+	<div id="middle">
 	<div class="track">
 		<p id="trackInfo"> </p>
 	</div>
@@ -140,14 +153,16 @@
 	<div class="result">
 		<p id="resultInfo"> </p>
 	</div>
-
+	<div class="content">
 	<div class="frame">
 		<!-- Show webcam video -->
 		<video id="video" width="640" height="480" preload autoplay loop muted></video>
 		<!-- Make canvas for traking face -->
 		<canvas id="canvas" width="640" height="480"></canvas>
 	</div>
-
+	</div>
+	</div>
+	</div>
 	<!-- Configure a few setting & Attach camera -->
 	<script language="JavaScript">
 		Webcam.set({
