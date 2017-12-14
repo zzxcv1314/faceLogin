@@ -61,7 +61,7 @@ function getFaceId(){
     global $faceiid;
     global $testimage;
     $img_path = "https://loginwithface.azurewebsites.net/VerifyFace/data/".$testimage;
-    $url = 'https://eastus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceAttributes=true';
+    $url = 'https://eastus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceAttributes=smile';
     //$param = "{\"url\":\"".$img_path."\"}";
 
     $data = array("url" => $img_path); 
