@@ -11,16 +11,23 @@
 		body{
 			background-color:#30472F;
 		}
-		#wrap{width:1000px;}
+		#content{
+			float: left;
+			width: 70%;
+			background: red;
 
-		#header{width:1000px; float:left;}
+		}
+		#sidebar{
+			float: right;
+			width: 30%;
+			background: blue;
+		}
 
-		#sidebar{width:300px; float:left;}
-
-		#content{width:700px; float:left;}
-
-		#footer{width:1000px; float:left;}
-
+		#footer{
+			clear: both;
+			background: gray;
+		}
+		
 	</style>
 </head>
 <body>
@@ -136,33 +143,33 @@
 			<img src="a.jpg">
 		
 	</div>
-	
-	<div id="EnrollInfo">
-			<form id="myform" method="post" action="upload.php">
-					
-					Username: <input type="text" name="usrname" id="usrname"><br>
-					<input type=button id="snapshotButton" value="Take Snapshot" onClick="snapshot()">
-				</form>
+	<div id="sidebar">
+		<div id="EnrollInfo">
+				<form id="myform" method="post" action="upload.php">
+						
+						Username: <input type="text" name="usrname" id="usrname"><br>
+						<input type=button id="snapshotButton" value="Take Snapshot" onClick="snapshot()">
+					</form>
+		</div>
+	</div>
+	<div id="content">
+		<div class="track">
+			<p id="trackInfo"> </p>
+		</div>
+
+		<div class="result">
+			<p id="resultInfo"> </p>
+		</div>
+
+		<div class="frame">
+			<!-- Show webcam video -->
+			<video id="video" width="640" height="480" preload autoplay loop muted></video>
+			<!-- Make canvas for traking face -->
+			<canvas id="canvas" width="640" height="480"></canvas>
+		</div>
+		</div>
 	</div>
 
-	<div id="middle">
-	<div class="track">
-		<p id="trackInfo"> </p>
-	</div>
-
-	<div class="result">
-		<p id="resultInfo"> </p>
-	</div>
-	<div class="content">
-	<div class="frame">
-		<!-- Show webcam video -->
-		<video id="video" width="640" height="480" preload autoplay loop muted></video>
-		<!-- Make canvas for traking face -->
-		<canvas id="canvas" width="640" height="480"></canvas>
-	</div>
-	</div>
-	</div>
-	</div>
 	<!-- Configure a few setting & Attach camera -->
 	<script language="JavaScript">
 		Webcam.set({
