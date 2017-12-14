@@ -100,10 +100,11 @@ function getFaceId(){
  
     foreach ($json[0]['faceAttributes']['emotion'] as $key => $value)
     {
-        echo "$key : $value <br>";
+        echo "$key : $value |";
         
     };
-    
+
+    echo 
 
 }
 
