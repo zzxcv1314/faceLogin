@@ -88,8 +88,8 @@ function getFaceId(){
     //echo $json[0]['faceId'];
     $faceiid = $json[0]['faceId'];
     $faceatt = $json[0]['faceAttributes']['age'];
-    $faceemo = $json[0]['faceAttributes']['emotion'];
-    rsort($json[0]['faceAttributes']['emotion']);
+    $faceemo = $json[0]['faceAttributes'];
+    //rsort($json[0]['faceAttributes']);
     
     echo $faceemo; 
     echo $faceatt; 
