@@ -87,22 +87,17 @@ function getFaceId(){
     
     //echo $json[0]['faceId'];
     $faceiid = $json[0]['faceId'];
-    //$faceatt = $json[0]['faceAttributes']['age'];
-    $faceemo = $json[0]['faceAttributes']['emotion'];
+    $faceatt = $json[0]['faceAttributes']['age'];
+    //$faceemo = $json[0]['faceAttributes']['emotion'];
     //rsort($json[0]['faceAttributes']);
     
     
-    //echo $faceatt; 
+    echo $faceatt; 
     //echo "\n";
    // print_r($faceemo);
 
-    $someArray = $json; // Replace ... with your PHP Array
- 
-    foreach ($json[0]['faceAttributes']['emotion'] as $key => $value)
-    {
-        echo "$key : $value <br>";
-        
-    };
+    
+    
     
 
 }
