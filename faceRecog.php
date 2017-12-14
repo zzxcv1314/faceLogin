@@ -1,5 +1,5 @@
 <?php
-uploadImage(); 
+
 
 $testimage; 
 $faceiid; 
